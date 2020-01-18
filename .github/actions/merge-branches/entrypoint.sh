@@ -7,7 +7,6 @@ echo "  'Merge Action' is using the following input:"
 echo "    - source_branch = '$INPUT_SOURCE_BRANCH'"
 echo "    - target_branch = '$INPUT_TARGET_BRANCH'"
 echo "    - allow_ff = $INPUT_ALLOW_FF"
-echo "    - allow_git_lfs = $INPUT_GIT_LFS"
 echo "    - ff_only = $INPUT_FF_ONLY"
 echo "    - allow_forks = $INPUT_ALLOW_FORKS"
 echo "    - user_name = $INPUT_USER_NAME"
@@ -69,11 +68,6 @@ set -o xtrace
 
 # Do the merge
 git merge $FF_MODE --no-edit $INPUT_SOURCE_BRANCH
-
-# Pull lfs if enabled
-if $INPUT_GIT_LFS; then
-  git lfs pull
-fi
 
 # Push the branch
 git push origin $INPUT_TARGET_BRANCH
