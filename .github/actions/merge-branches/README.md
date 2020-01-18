@@ -54,6 +54,9 @@ on:
     - cron:  '0 0 * * *'
 ```
 
+The `Checkout` step checks out your repository so that the workflow
+can access its contents.
+
 ## Parameters
 
 ### `source_branch`
