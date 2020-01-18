@@ -34,11 +34,11 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Nightly Merge
-      uses: robotology/gh-action-nightly-merge@v1.2.0
+      uses: ./.github/actions/merge-branches
       with:
-        stable_branch: 'master'
-        development_branch: 'nightly'
-        allow_ff: false
+        source_branch: 'master'
+        target_branch: 'nightly'
+        allow_ff: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
