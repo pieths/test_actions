@@ -13,7 +13,7 @@ maintainer should perform the merge manually.
 
 ## Installation
 
-To enable the action simply create the `.github/workflows/nightly-merge.yml`
+To enable the action, create the `.github/workflows/nightly-merge.yml`
 file with the following content:
 
 ```yml
