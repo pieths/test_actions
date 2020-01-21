@@ -1,1 +1,2 @@
 this is the fifth test file.
+this is a new line added to the file using the automated merge.
